@@ -1,0 +1,13 @@
+/* font-family: 'Alice', serif;
+font-family: 'Codystar', cursive;
+font-family: 'DotGothic16', sans-serif;
+font-family: 'Faster One', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Rampart One', cursive;
+font-family: 'Zen Tokyo Zoo', cursive; */
+
+.encabezado {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+    line-height: 20px;
+}
