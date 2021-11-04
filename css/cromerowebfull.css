@@ -68,8 +68,8 @@ a:hover {
     margin-right: 20px;
 }
 
-.encabezado:hover{
-color: red;
+.encabezado:hover {
+    color: red;
 }
 
 nav {
@@ -92,11 +92,21 @@ nav ul li a {
     font-family: 'DotGothic16', sans-serif;
     text-shadow: 2px 4px 18px rgb(255, 8, 0);
     font-size: 0.8em;
-    color: white;
+    color:white;
     text-decoration: none;
     text-align: center;
     display: block;
     padding: 0.4em 0.2em;
+}
+
+.activo {
+    background-color: #4adef8;
+    border-radius: 20px;    
+    
+}
+
+.activo :hover{
+    color: white;
 }
 
 .presentacion {
@@ -211,7 +221,7 @@ nav ul li a {
     margin-bottom: 0;
 }
 
-footer{
+footer {
     color: rgb(255, 250, 250);
     text-align: right;
     font-size: 0.7em;
