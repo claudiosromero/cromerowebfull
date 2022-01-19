@@ -1,3 +1,6 @@
+import '../styles/components/pages/Home.css'
+
+
 const HomePage = (props) => {
     return (
         <main className="contenedor_principal holder">

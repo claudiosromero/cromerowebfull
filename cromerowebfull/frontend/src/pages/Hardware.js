@@ -1,3 +1,6 @@
+import '../styles/components/pages/Hardware.css'
+
+
 const Hardware = (props) => {
     return (
         <main className="contenedor_principal holder">

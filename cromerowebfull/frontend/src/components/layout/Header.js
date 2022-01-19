@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom";
+import '../../styles/components/layout/Header.css'
+
 const Header = (props) => {
     return (
         <header>
         <div className="holder">
-            <div classNamer="boton_inicio">
+            {/* <div classNamer="boton_inicio">
                 <a href="index.html"><i class="fas fa-home"></i></a>
                 <input class="busqueda" type="text" placeholder="Busqueda"/>
                 <input type="button" value="Buscar"/>
-            </div>
+            </div> */}
             <div className="encabezado">
                 <h1>CromeroWebFull</h1>
             </div>

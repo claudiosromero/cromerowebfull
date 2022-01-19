@@ -1,0 +1,30 @@
+.historiacripto{
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    line-height: 1.5em;
+    color: white;
+    text-shadow: 2px 4px 18px rgb(255, 8, 0);
+}
+
+.monedas{
+    overflow: hidden;
+}
+
+.moneda{
+    width: 22%;
+    border-radius: 20px;
+    float: left;
+    margin-left: 2.25%;
+    text-align: center;
+    background-color: rgb(255, 250, 250);
+    line-height: 2em;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.moneda img{
+    max-width: 70%;
+}

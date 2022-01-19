@@ -1,5 +1,8 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
+
+import { BrowserRouter as Router, Routes, Route }
+from "react-router-dom";
 
 import Header from "./components/layout/Header";
 import Nav from "./components/layout/Nav";
@@ -9,18 +12,26 @@ import Criptomonedas from "./pages/Cripto";
 import Gamers from "./pages/Gamers";
 import Hardware from "./pages/Hardware";
 import HomePage from "./pages/Home";
-import Tecnologias from "./pages/Tecnologia";
+
 
 
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header></Header>
       <Nav></Nav>
-      <Footer></Footer>
-    </div>
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        <Route path="/Contacto" exact element={<Contacto />} />
+        <Route path="/Cripto" exact element={<Criptomonedas />} />
+        <Route path="/Gamers" exact element={<Gamers />} />
+        <Route path="/Hardware" exact element={<Hardware />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
+
 
 export default App;

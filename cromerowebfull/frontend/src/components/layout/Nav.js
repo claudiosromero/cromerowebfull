@@ -1,15 +1,16 @@
-import NavLink from "../NavLink";
+import { Link } from "react-router-dom";
 import '../../styles/components/layout/Nav.css'
+
 
 const Nav = (props) => {
     return (
         <nav>
             <ul className="holder">
-                <li><a href="gamers.html">Mundo Gamers</a></li>
-                <li><a href="harware.html">Hardware</a></li>
-                <li><a href="tecnologia.html">Nuevas Tecnologias</a></li>
-                <li><a href="cripto.html">Criptomonedas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/Gamers">Gamers</Link></li>
+                <li><Link to="/Hardware">Hardware</Link></li>
+                <li><Link to="/Cripto">Criptomonedas</Link></li>
+                <li><Link to="/Contacto">Contacto</Link></li>
             </ul>
         </nav>
 

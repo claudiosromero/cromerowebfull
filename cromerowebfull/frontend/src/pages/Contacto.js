@@ -1,3 +1,5 @@
+import '../styles/components/pages/Contacto.css'
+
 const Contacto = (props) => {
     return (
         <main className="contenedor_principal holder">

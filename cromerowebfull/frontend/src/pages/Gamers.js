@@ -1,3 +1,6 @@
+import '../styles/components/pages/Gamer.css'
+
+
 const Gamers = (props) => {
     return (
         <main className="contenedor_principal holder">

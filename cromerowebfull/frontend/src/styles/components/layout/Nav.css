@@ -1,0 +1,28 @@
+/*primero en el móvil (mobile first)*/
+nav {
+    padding: 1em;
+
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+  }
+  nav li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: .5em 1em;
+  }
+  nav li a:hover {
+    color: tomato;
+    
+  }
+
+  @media screen and (min-width: 520px) {
+    nav ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }

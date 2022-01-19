@@ -1,3 +1,6 @@
+import '../styles/components/pages/Cripto.css'
+
+
 const Criptomonedas = (props) => {
     return(
 <main className="contenedor_principal holder">

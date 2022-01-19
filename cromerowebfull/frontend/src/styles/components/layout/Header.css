@@ -1,0 +1,46 @@
+header {
+    background-image: url(https://github.com/claudiosromero/cromerowebfull/blob/main/imagenes/div/ImgAbstractos%20134.jpg?raw=true);
+    height: 110px;
+}
+/* .boton_inicio {
+    display: inline-block;
+    margin-top: 20px;
+
+}
+
+.boton_inicio a {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 4px 18px rgb(255, 8, 0);
+    margin-left: 20px;
+}
+
+.busqueda {
+    margin-left: 90px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+.boton_inicio input {
+    border-radius: 20px;
+}
+
+a:hover {
+    color: red;
+} */
+
+.encabezado {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: white;
+    float: right;
+    text-shadow: 2px 4px 18px rgb(255, 8, 0);
+    margin-right: 20px;
+}
+
+.encabezado:hover {
+    color: red;
+}

@@ -10,13 +10,13 @@ const NavLink = ({ children, to, activeClassName, ...props }) => {
 
     return (
         <div>
-            <link
+            <Link
                 className={`${className} ${match ? activeClassName : null}`}
                 to={to}
                 {...props}
             >
                 {children}
-            </link>
+            </Link>
         </div>
     );
 }
