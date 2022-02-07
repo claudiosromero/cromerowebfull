@@ -258,18 +258,19 @@ footer {
     padding-bottom: 1em;
 }
 
-.notahardware{
+.notahardware {
     padding: 1em;
 }
 
-.notahardware img{
+.notahardware img {
     border-radius: 20px;
 
 }
+
 /* FIN DE HARDWARE */
 
 /* INICIO DE TECNOLOGIAS */
-.nuevastecnologias{
+.nuevastecnologias {
     display: flex;
     flex-wrap: wrap;
     padding: 1em;
@@ -281,10 +282,10 @@ footer {
     border-radius: 30px;
     margin: 0.5em;
     text-align: left;
-    padding-bottom: 1em; 
+    padding-bottom: 1em;
 }
 
-.nuevastecnologias h2{
+.nuevastecnologias h2 {
     font-size: 2em;
     color: green;
 }
@@ -292,10 +293,11 @@ footer {
 .nuevastecnologias p {
     font-size: 0.8em;
 }
+
 /* FIN DE TECNOLOGIAS */
 
 /* INICIO DE CRIPTOS */
-.historiacripto{
+.historiacripto {
     font-size: 1em;
     padding: 0.5em;
     border-radius: 20px;
@@ -306,11 +308,11 @@ footer {
     text-shadow: 2px 4px 18px rgb(255, 8, 0);
 }
 
-.monedas{
+.monedas {
     overflow: hidden;
 }
 
-.moneda{
+.moneda {
     width: 22%;
     border-radius: 20px;
     float: left;
@@ -322,36 +324,38 @@ footer {
     box-sizing: border-box;
 }
 
-.moneda img{
+.moneda img {
     max-width: 70%;
 }
+
 /* FIN DE CRIPTOS */
 
 /* INICIO DE CONTACTO */
-.contacto{
+.contacto {
     font-family: 'Permanent Marker', cursive;
-color: green;
+    color: green;
     display: flex;
     width: 98%;
     border-radius: 20px;
     background-color: rgb(255, 250, 250);
     box-sizing: border-box;
     padding: 0.5em;
-    
-}
-.contactoleft{
-    width: 50%;
-    border-right: 1px solid green;
-    
+
 }
 
-.formulario label{
+.contactoleft {
+    width: 50%;
+    border-right: 1px solid green;
+
+}
+
+.formulario label {
     vertical-align: top;
     width: 20%;
     display: inline-block;
 }
 
-.formulario input, 
+.formulario input,
 .formulario textarea {
     background-color: #ddd;
     border-radius: 5px;
@@ -362,15 +366,15 @@ color: green;
 }
 
 .contactoright {
-margin-left: 100px;
+    margin-left: 100px;
 }
 
-.contactoright ul li{
+.contactoright ul li {
     font-size: 1em;
     padding: 10px;
 }
 
-.formulario input[type="submit"]{
+.formulario input[type="submit"] {
     background-color: green;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: white;
@@ -379,15 +383,128 @@ margin-left: 100px;
     cursor: pointer;
 }
 
-.contacto textarea{
+.contacto textarea {
     height: 10em;
     resize: none;
 
 }
 
-.formulario .acciones{
-text-align: center;
+.formulario .acciones {
+    text-align: center;
 }
 
 /* FIN DE CONTACTO */
+
+/* LOGIN */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden
+} */
+
+
+
+.loginBox {
+    margin-top: 20px;
+    width: 350px;
+    min-height: 200px;
+    background: #000000e4;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box
+}
+
+.user {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px
+}
+
+h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #59238F;
+    text-align: center
+}
+
+.loginBox input {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #262626;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    background: transparent;
+    font-size: 16px;
+    padding-left: 20px;
+    box-sizing: border-box
+}
+
+.loginBox input[type="text"]:hover,
+.loginBox input[type="password"]:hover {
+    color: #fa4242;
+    border: 1px solid #fa4242;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.931), 0 0 10px rgba(255, 0, 0, 0.572), 0 0 15px rgba(255, 0, 0, 0.1), 0 2px 0 black
+}
+
+.loginBox input[type="text"]:focus,
+.loginBox input[type="password"]:focus {
+    border-bottom: 2px solid #fa4242
+}
+
+.inputBox {
+    position: relative
+}
+
+.inputBox span {
+    position: absolute;
+    top: 10px;
+    color: #262626
+}
+
+.loginBox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #59238F;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer
+}
+
+.loginBox a {
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block
+}
+
+a:hover {
+    color: #ff0000
+}
+
+.loginBox p {
+    color: #8f2323;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block
+}
+
+/* FOOTER */
 

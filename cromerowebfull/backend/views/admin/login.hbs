@@ -1,1 +1,16 @@
-<h2>Futura pagina Administrador</h2>
+<div class="container loginBox"> <img class="user" src="https://img.icons8.com/bubbles/100/000000/administrative-tools.png"
+        height="100px" width="100px">
+    <h3>Acceso Administradores FullWeb</h3>
+    <form action="/admin/login" method="post">
+        <div class="inputBox">
+            <input id="uname" type="text" name="usuario" placeholder="Usuario">
+            <input id="pass" type="password" name="password" placeholder="Password">
+        </div>
+        <input type="submit" name="" value="Ingresar">
+        <a href="#">Olvido su Password<br> </a>
+    </form>
+
+    {{#if error}}
+    <p>Usuario o Password Incorrecto</p>
+    {{/if}}
+</div>
