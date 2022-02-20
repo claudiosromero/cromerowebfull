@@ -1,74 +1,51 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import NovedadItem from '../components/novedades/Novedad.Item'
+
 import '../styles/components/pages/Gamer.css'
 
 
+
+
 const Gamers = (props) => {
+
+    const [loading, setLoading] = useState(false);
+    const [novedades, setNodades] = useState([]);
+
+    useEffect(() => {
+        const cargarNovedades = async () => {
+            setLoading(true);
+            const response = await axios.get('http://localhost:3000/api/novedades');
+            setNodades(response.data);
+            setLoading(false);
+        };
+
+        cargarNovedades();
+
+    }, []);
+
     return (
         <main className="contenedor_principal holder">
-            <div className="img_bienvenida">
-                <img className="img_bienvenida" src="imagenes/portadagamer1.jpg" alt="" width="100%" />
-            </div>
-            <div className="recomendadas">
+
+            <div className="recomendadas notasgamer">
                 <h2>Ultimos lanzamientos, Consolas y Mas!!!</h2>
-                <div className="notasgamer">
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Lanzamientos 2021</h3>
-                            <h4>Los titulos para Pc y Consolas de este año</h4>
-                            <a href=""><img src="imagenes/videojuegos2021.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
+
+
+                
+                {loading ? (
+                    <p>Cargando...</p>
+                ) : (
+                    novedades.map(item => <NovedadItem key={item.id}
+                        title={item.titulo} subtitle={item.subtitulo}
+                        imagen={item.imagen} body={item.cuerpo} />)
+                )}
+
+
             </div>
-        </main >
+
+
+        </main>
+
     );
 }
 

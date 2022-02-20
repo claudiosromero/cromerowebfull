@@ -8,7 +8,7 @@ const Nav = (props) => {
         <nav>
             <ul className="holder">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/Gamers">Gamers</Link></li>
+                {/* <li><Link to="/Gamers">Gamers</Link></li> */}
                 <li><Link to="/Hardware">Hardware</Link></li>
                 <li><Link to="/Cripto">Criptomonedas</Link></li>
                 <li><Link to="/Contacto">Contacto</Link></li>

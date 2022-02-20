@@ -420,6 +420,16 @@ footer {
     box-sizing: border-box
 }
 
+.novedadesBox {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 200px;
+    background: #000000e4;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box
+}
+
 .user {
     margin: 0 auto;
     display: block;
@@ -506,5 +516,90 @@ a:hover {
     display: block
 }
 
-/* FOOTER */
 
+/* novedades */
+
+.novedadesBox input {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.novedadesBox input[type="text"],
+.novedadesBox input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #262626;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    background: transparent;
+    font-size: 16px;
+    padding-left: 20px;
+    box-sizing: border-box
+}
+
+.novedadesBox input[type="text"]:hover,
+.novedadesBox input[type="password"]:hover {
+    color: #fa4242;
+    border: 1px solid #fa4242;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.931), 0 0 10px rgba(255, 0, 0, 0.572), 0 0 15px rgba(255, 0, 0, 0.1), 0 2px 0 black
+}
+
+.novedadesBox input[type="text"]:focus,
+.novedadesBox input[type="password"]:focus {
+    border-bottom: 2px solid #fa4242
+}
+
+.novedadesBox {
+    position: relative
+}
+
+.novedadesBox span {
+    position: absolute;
+    top: 10px;
+    color: #262626
+}
+
+.novedadesBox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #59238F;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer
+}
+
+.novedadesBox a {
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block
+}
+
+a:hover {
+    color: #ff0000
+}
+
+.novedadesBox p {
+    color: #8f2323;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block
+}
+
+.novedadesBox textarea {
+    margin-bottom: 20px;
+}
+
+.novedadesBox label {
+    color: #8f2323;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */

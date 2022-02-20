@@ -4,9 +4,19 @@
     align-content: center;
 }
 
+.presentacion h1 {
+    font-size: 1.2em;
+
+}
+
+.presentacion img {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 .bienvenido {
     text-align: center;
-    width: 75%;
+    text-decoration: solid;
 }
 
 .bienvenido h2 {
@@ -20,6 +30,7 @@
     font-size: 1.5em;
     padding: 1em;
     line-height: 1em;
+    color:brown;
 
 }
 

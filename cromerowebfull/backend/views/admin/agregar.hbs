@@ -1,0 +1,28 @@
+<div class="container novedadesBox"> <img class="user" src="https://img.icons8.com/dusk/64/000000/add-property.png"
+        height="100px" width="100px">
+    <h3>Agregar una Novedad</h3>
+    <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Titulo" name="titulo">
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Subtitulo" name="subtitulo"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+        </div>
+        <div class="form-group">
+            <p>
+            <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+            </p>
+        </div>
+
+
+        <input type="submit" name="" value="Guardar">
+
+    </form>
+
+    {{#if error}}
+    {{message}}
+    {{/if}}
+</div>

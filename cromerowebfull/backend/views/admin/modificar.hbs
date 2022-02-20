@@ -1,0 +1,37 @@
+<div class="container novedadesBox"> <img class="user" src="https://img.icons8.com/dusk/64/000000/add-property.png"
+        height="100px" width="100px">
+    <h3>Modificar una Novedad</h3>
+    <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+        <div class="form-group">
+            <input type="text" value="{{novedad.titulo}}" class="form-control" placeholder="Titulo" name="titulo">
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Subtitulo"
+                name="subtitulo">{{novedad.subtitulo}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo">{{novedad.cuerpo}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <p>
+                <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+            </p>
+
+            <p>
+                <label><input type="checkbox" name="img_delete" id="img_delete" value="1">
+                Eliminar Imagen?</label>
+                <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+            </p>
+        </div>
+
+        <input type="submit" name="" value="Modificar">
+
+    </form>
+
+    {{#if error}}
+    {{message}}
+    {{/if}}
+</div>
