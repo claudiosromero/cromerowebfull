@@ -28,7 +28,8 @@ const Contacto = (props) => {
         e.preventDefault();
         setMsg('');
         setSending(true)
-        const response = await axios.post('http://localhost:3000/api/contacto', formData); //`${process.env.REAC_APP_API_URL}/api/contacto`
+        const response = await
+            axios.post('http://localhost:3000/api/contacto', formData); //`${process.env.REAC_APP_API_URL}/api/contacto`
         setSending(false);
         setMsg(response.data.message);
         if (response.data.error === false) {
@@ -41,30 +42,30 @@ const Contacto = (props) => {
 
             <div className="contacto holder">
                 <div className="contactoleft">
-                    {/* <h2>Contacto Rapido</h2> */}
-                    <form className="formulario loginBox" onsubmit={handleSubmit}>
+                    {/* <h2>Contacto</h2> */}
+                    <form action="/contacto" method="post" className="formulario loginBox" onsubmit={handleSubmit}>
                         <p>
                             <label>Nombre</label>
-                            <input type="text" name="nombre" value={formData.nombre} onChange={handleChange}/>
+                            <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
                         </p>
                         <p>
                             <label>Email</label>
-                            <input type="text" name="email" value={formData.email} onChange={handleChange}/>
+                            <input type="text" name="email" value={formData.email} onChange={handleChange} />
                         </p>
                         <p>
                             <label>Telefono</label>
-                            <input type="text" name="telefono" value={formData.telefono} onChange={handleChange}/>
+                            <input type="text" name="telefono" value={formData.telefono} onChange={handleChange} />
                         </p>
                         <p>
                             <label>Comentario</label>
-                            <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}/>
+                            <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} />
                         </p>
 
                         <p className="centrar"><input type="submit" value="Enviar" /></p>
                     </form>
 
                     {sending ? <p>Enviando...</p> : null}
-                        {msg ? <p>{msg}</p> : null}
+                    {msg ? <p>{msg}</p> : null}
 
                 </div>
                 <div className="contactoright">
@@ -76,10 +77,10 @@ const Contacto = (props) => {
                         <li>Instagram</li>
                     </ul>
                     <div className="img_bienvenida">
-                <img className="img_bienvenida" src="imagenes/contacto/contacto.jpg" alt="" width="100%" />
-            </div>
+                        <img className="img_bienvenida" src="imagenes/contacto/contacto.jpg" alt="" width="100%" />
+                    </div>
                 </div>
-                
+
             </div>
         </main>
 
