@@ -4,46 +4,43 @@ import axios from 'axios';
 import '../styles/components/pages/Contacto.css'
 
 const Contacto = (props) => {
+	const initialForm = {
+		nombre: '',
+		correo: '',
+		mensaje: ''
+	}
+	const [sending, setSending] = useState(false);
+	const [msg, setMsg] = useState('');
+	const [formData, setFormData] = useState(initialForm);
 
-    const initialForm = {
-        nombre: '',
-        email: '',
-        telefono: '',
-        mensaje: ''
-    }
+	const handleChange = e => {
+		const { name, value } = e.target;
+		setFormData(oldData => ({
+			...oldData,
+			[name]: value
+		}));
+	}
 
-    const [sending, setSending] = useState(false);
-    const [msg, setMsg] = useState('');
-    const [formData, setFormData] = useState(initialForm);
-
-    const handleChange = e => {
-        const { name, value } = e.target;
-        setFormData(oldData => ({
-            ...oldData,
-            [name]: value // forma dinamica
-        }));
-    }
-
-    const handleSubmit = async e => {
-        e.preventDefault();
-        setMsg('');
-        setSending(true)
-        const response = await
-            axios.post('http://localhost:3000/api/contacto', formData); //`${process.env.REAC_APP_API_URL}/api/contacto`
-        setSending(false);
-        setMsg(response.data.message);
-        if (response.data.error === false) {
-            setFormData(initialForm)
-        }
-    }
+	const handleSubmit = async e => {
+		e.preventDefault();
+		setMsg('');
+		setSending(true)
+		const response = await
+			axios.post('http://localhost:3000/api/contacto', formData);
+		setSending(false);
+		setMsg(response.data.message);
+		if (response.data.error === false) {
+			setFormData(initialForm)
+		}
+	}
 
     return (
         <main className="contenedor_principal holder">
 
             <div className="contacto holder">
                 <div className="contactoleft">
-                    {/* <h2>Contacto</h2> */}
-                    <form action="/contacto" method="post" className="formulario loginBox" onsubmit={handleSubmit}>
+                    <h2>Contacto</h2>
+                    <form action="/contacto" method="post" className="formulario loginBox" onSubmit={handleSubmit}>
                         <p>
                             <label>Nombre</label>
                             <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
