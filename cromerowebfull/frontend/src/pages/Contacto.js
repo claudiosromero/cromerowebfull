@@ -28,7 +28,7 @@ const Contacto = (props) => {
         e.preventDefault();
         setMsg('');
         setSending(true)
-        const response = await axios.post('http://localhost:3000/api/contacto', formData);
+        const response = await axios.post('http://localhost:3000/api/contacto', formData); //`${process.env.REAC_APP_API_URL}/api/contacto`
         setSending(false);
         setMsg(response.data.message);
         if (response.data.error === false) {
@@ -59,10 +59,12 @@ const Contacto = (props) => {
                             <label>Comentario</label>
                             <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}/>
                         </p>
-                        {sending ? <p>Enviando...</p> : null}
-                        {msg ? <p>{msg}</p> : null}
+
                         <p className="centrar"><input type="submit" value="Enviar" /></p>
                     </form>
+
+                    {sending ? <p>Enviando...</p> : null}
+                        {msg ? <p>{msg}</p> : null}
 
                 </div>
                 <div className="contactoright">
