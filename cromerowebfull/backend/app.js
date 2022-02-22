@@ -8,7 +8,7 @@ var cors = require('cors');
 
 require('dotenv').config();
 var session = require('express-session');
-var fileUpload = require('express-fileUpload');
+var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
