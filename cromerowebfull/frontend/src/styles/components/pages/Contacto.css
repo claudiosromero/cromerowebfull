@@ -10,7 +10,8 @@ color: green;
     
 }
 .contactoleft{
-    width: 150%;
+    text-align: center;
+    width: 100%;
     border-right: 1px solid green;
     
 }
@@ -32,12 +33,12 @@ color: green;
 }
 
 .contactoright {
-margin-left: 60px;
+margin-left: 30px;
 }
 
 .contactoright ul li{
     font-size: 1em;
-    padding: 10px;
+    padding: 20px;
 }
 
 .formulario input[type="submit"]{
